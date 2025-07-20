@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int fib(int n) {
+        int a=0,b=1,sum;
+        if(n==0){
+            return 0;
+        }
+        while(n>1){
+            sum=a+b;
+            a=b;
+            b=sum;
+            n--;
+        }
+        return sum;
+    }
+};
