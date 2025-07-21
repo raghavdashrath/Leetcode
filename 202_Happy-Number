@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        int sqr=0,last;
+        while(n!=0){
+            last=n%10;
+            sqr=sqr+last*last;
+            n=n/10;
+        }
+        if(sqr>4) return isHappy(sqr);
+        else return sqr==1;
+    }
+};
